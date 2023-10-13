@@ -25,12 +25,12 @@ const Login = () => {
   const navigate = useNavigate();
   const handleLogin = () => {
     loginUser(userData).then((res) => {
-      if(res?.status === 200){
+      if (res?.status === 200) {
         localStorage.setItem('token', JSON.stringify(res?.data?.token));
-        enqueueSnackbar('Login successful', {variant : 'success'});
+        enqueueSnackbar('Login successful', { variant: 'success' });
         navigate('/dashboard');
-      }else{
-        enqueueSnackbar('Login failed', {variant : 'error'});
+      } else {
+        enqueueSnackbar('Login failed', { variant: 'error' });
       }
     });
   };

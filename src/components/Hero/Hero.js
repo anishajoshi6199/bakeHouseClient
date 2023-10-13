@@ -7,8 +7,8 @@ const Hero = () => {
 
   const navigate = useNavigate()
 
-  const onClickHandler = () =>{
-    navigate('/login');
+  const onClickHandler = () => {
+    navigate('/ContactUs');
   }
 
   return (

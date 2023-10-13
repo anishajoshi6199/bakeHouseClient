@@ -6,6 +6,8 @@ import { TbArrowBigRightFilled, TbArrowBigRight } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 import { registerUser } from "services/services";
 import { useSnackbar } from "notistack";
+import { loginUser } from 'services/services';
+
 
 const Register = () => {
 	const { enqueueSnackbar } = useSnackbar();
@@ -15,6 +17,19 @@ const Register = () => {
 		email: "",
 		password: "",
 	});
+
+
+	const handleLogin = () => {
+		loginUser(userData).then((res) => {
+			if (res?.status === 200) {
+				localStorage.setItem('token', JSON.stringify(res?.data?.token));
+				enqueueSnackbar('Login successful', { variant: 'success' });
+				navigate('/dashboard');
+			} else {
+				enqueueSnackbar('Login failed', { variant: 'error' });
+			}
+		});
+	};
 
 	const [passwordValidation, setPasswordValidation] = useState({
 		password: "",
@@ -158,26 +173,44 @@ const Register = () => {
 					/>
 
 					{/* Submit */}
-					<Button
-						className="btn inputFieldsBtn"
-						variant="contained"
-						type="submit"
-						onMouseEnter={handleShowIcon}
-						onMouseLeave={handleHideIcon}
-						onClick={handleRegister}
-						disabled={
-							!userData.name ||
-							!userData.email ||
-							!passwordValidation.password ||
-							!passwordValidation.confirmPassword
-						}
-					>
-						{showIcon ? (
-							<TbArrowBigRightFilled />
-						) : (
-							<TbArrowBigRight />
-						)}
-					</Button>
+					<div className="submitBtn">
+						{/* <Button
+							className="btn inputFieldsBtn"
+							variant="contained"
+							type="submit"
+							onMouseEnter={handleShowIcon}
+							onMouseLeave={handleHideIcon}
+							onClick={handleRegister}
+							disabled={
+								!userData.name ||
+								!userData.email ||
+								!passwordValidation.password ||
+								!passwordValidation.confirmPassword
+							}
+						>
+							<div className="arrowBtn">
+								{showIcon ? (
+									<TbArrowBigRightFilled />
+								) : (
+									<TbArrowBigRight />
+								)}
+							</div>
+
+						</Button> */}
+
+
+
+						<Button
+							className="btn inputFieldsBtn"
+							variant="contained"
+							onMouseEnter={handleShowIcon}
+							onMouseLeave={handleHideIcon}
+							onClick={handleLogin}
+						>
+							{showIcon ? <TbArrowBigRightFilled /> : <TbArrowBigRight />}
+						</Button>
+						<a className="tryNew" href="">Try another way</a>
+					</div>
 				</form>
 			</div>
 		</div>
