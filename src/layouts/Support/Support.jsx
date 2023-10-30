@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Layout from '../Layout';
 
 const Support = () => {
   return (
-    <div>Support</div>
+    <Layout>
+      <div>Support</div>
+    </Layout>
   )
 }
 

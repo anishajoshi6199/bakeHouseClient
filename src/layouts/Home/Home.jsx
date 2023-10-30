@@ -6,6 +6,7 @@ import Testimonial from '../../components/Testimonial/Testimonial';
 import Menu from '../../components/Menu/Menu';
 import Footer from '../../components/Footer/Footer';
 import '../../styles/global.scss';
+import Layout from '../Layout';
 
 function Home() {
   return (
@@ -19,6 +20,10 @@ function Home() {
       <Testimonial />
       <Menu />
       <Footer />
+
+
+
+
     </>
   );
 }

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { registerUser } from "services/services";
 import { useSnackbar } from "notistack";
 import { loginUser } from 'services/services';
-
+ 
 
 const Register = () => {
 	const { enqueueSnackbar } = useSnackbar();
@@ -17,7 +17,6 @@ const Register = () => {
 		email: "",
 		password: "",
 	});
-
 
 	const handleLogin = () => {
 		loginUser(userData).then((res) => {

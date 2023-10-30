@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+* {
+    font-family: 'Playfair Display', serif;
+}
+
+.cartDashboardHero {
+    background-color: #000;
+    width: 100%;
+}
+
+.cartDashboardImg {
+    background-image: linear-gradient(rgba(30, 30, 30, 0.5), rgba(37, 37, 37, 0.8)),
+        url(../../../public/images/cartDashboard/cartDashboardOne.png);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.textShadow {
+    text-shadow: 3px 4px #383838;
+    color: #fff;
+}

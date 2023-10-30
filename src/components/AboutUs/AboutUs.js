@@ -12,12 +12,12 @@ const AboutUs = () => {
           <div className="aboutUs_content">
             <h2 className="aboutUsHeading">About Us</h2>
             <p className="">
-              Lorem, ipsum dolor sit amet consectetur 
-              adipisicing elit. Aperiam velit, 
-              distinctio voluptatibus illum dolores at 
-              praesentium. Laboriosam rem nesciunt 
-              earum ipsam culpa. Voluptatem iste atque 
-              aliquam libero eveniet laudantium 
+              Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. Aperiam velit,
+              distinctio voluptatibus illum dolores at
+              praesentium. Laboriosam rem nesciunt
+              earum ipsam culpa. Voluptatem iste atque
+              aliquam libero eveniet laudantium
               ducimus.
             </p>
           </div>

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&display=swap');
 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --color-primary: #e58f00;
   --color-secondary: #fff;
@@ -96,10 +101,10 @@ a {
 .btn {
   background-color: var(--color-primary);
   border: 0;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   color: black;
-  font-size: 3rem;
+  font-size: 2.3rem;
   outline: 0;
   padding: 1rem 3.7rem;
   white-space: nowrap;
@@ -153,8 +158,7 @@ a {
 /* heroBlock */
 
 .block--hero {
-  background: url('../assets/images/meal1background.jpg') no-repeat
-    center center fixed;
+  background: url('../assets/images/meal1background.jpg') no-repeat center center fixed;
   /* background: url('./images/meal1background@3x.jpg') no-repeat center center fixed; */
   background-color: rgba(25, 24, 24, 1);
   background-blend-mode: overlay;

@@ -9,7 +9,8 @@ const Curve = () => {
     <div>
       <section className="block--curve">
         <div className="curve">
-          <img className="wave" src={wave} alt="" />
+          <img className="wave scale-y-[0.8]" src={wave} alt="" />
+
           <div className="curve_content">
             <h2>Our Food Quality</h2>
             <p>

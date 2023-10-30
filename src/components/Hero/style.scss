@@ -1,34 +1,36 @@
 /* Hero */
 
 .hero {
-  padding: 5rem 0;
+  padding: 5px 0;
   gap: 1rem;
 }
 
-.hero_img > img {
-  width: 100%;
-  padding: 1rem 1.5rem;
+.hero_img>img {
+  width: 72%;
+  margin: auto;
   display: block;
 }
 
 .hero_content {
-  padding: 0 1rem;
+  padding: 0 2.5rem;
   text-align: center;
 }
 
-.hero_content > h1 {
+.hero_content>h1 {
   margin: 0;
   font-weight: 800;
   color: var(--color-primary);
+  font-size: 3.6rem;
 }
 
-.hero_content > p {
+.hero_content>p {
   margin: 1rem;
   font-weight: 700;
   color: var(--color-secondary);
+  font-size: 1.7rem;
 }
 
-.hero_content > a {
+.hero_content>a {
   display: inline-block;
   margin: 1rem 0;
 }
@@ -44,34 +46,39 @@
     text-align: left;
   }
 
-  .hero_content > h1 {
-    line-height: 1;
+  .hero_content>h1 {
+    line-height: 1.2;
     white-space: nowrap;
+    font-size: 4rem;
   }
 
-  .hero_content > p {
+  .hero_content>p {
     margin: 2rem 2rem 1rem 0;
     width: 95%;
+    font-size: 1.9rem;
     /* line-height: none; */
   }
 }
 
 @media screen and (min-width: 1140px) {
   .hero {
-    padding: 10rem 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .hero_content {
     padding-left: 4rem;
   }
 
-  .hero_content > h1 {
-    line-height: 7.5rem;
+  .hero_content>h1 {
+    line-height: 6.8rem;
+    font-size: 6rem;
   }
-  .hero_content > p {
-    margin: 0.5rem 0;
-    width: 85%;
-    line-height: 4.8rem;
+
+  .hero_content>p {
+    margin: 1.5rem 0;
+    width: 83%;
+    line-height: 3.8rem;
+    font-size: 2.3rem;
   }
 }
-
